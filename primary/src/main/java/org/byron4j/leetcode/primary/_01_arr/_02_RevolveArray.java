@@ -1,6 +1,4 @@
-package org.byron4j.leetcode.primary;
-
-import java.util.Arrays;
+package org.byron4j.leetcode.primary._01_arr;
 
 /**
  * 旋转数组

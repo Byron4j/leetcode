@@ -1,4 +1,4 @@
-package org.byron4j.leetcode.primary;
+package org.byron4j.leetcode.primary._01_arr;
 
 import java.util.Arrays;
 

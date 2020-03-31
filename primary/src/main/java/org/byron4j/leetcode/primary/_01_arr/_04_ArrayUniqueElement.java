@@ -1,7 +1,4 @@
-package org.byron4j.leetcode.primary;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+package org.byron4j.leetcode.primary._01_arr;
 
 /**
  * 只出现一次的数字
@@ -38,12 +35,8 @@ public class _04_ArrayUniqueElement {
     public static void main(String[] args) {
         _04_ArrayUniqueElement arrayUniqueElement = new _04_ArrayUniqueElement();
         int[] arr = {2,2,1};
-        System.out.println(new ArrayList<>(
-                Arrays.asList(
-                        arrayUniqueElement.singleNumber(arr))));
+        System.out.println(arrayUniqueElement.singleNumber(arr));
         int[] arr2 = {4,1,2,1,2};
-        System.out.println(new ArrayList<>(
-                Arrays.asList(
-                        arrayUniqueElement.singleNumber(arr2))));
+        System.out.println(arrayUniqueElement.singleNumber(arr2));
     }
 }
