@@ -38,13 +38,44 @@ public class _01_reverseList {
         return preNode;  // 最后的null的前一个节点就是尾部节点---新的头结点
     }
 
+    /**
+     *递归实现
+     * @param head
+     * @return
+     */
+    public static ListNode reverseList2(ListNode head) {
+        if( head == null || head.next == null ){
+            // 这里：head是最后一个
+            return head;
+        }else{
+            // 递归到最后一个节点
+            ListNode listNode = reverseList2(head.next);
+
+            // 这里head是倒数第二个：  倒数第二个和最后一个逆向
+            // 则head.next.next变为倒数第二个;
+            // 而head变为倒数第一个，其next为null;
+            head.next.next = head;
+            head.next = null;
+
+            return listNode;
+        }
+    }
+
     public static void printNodes(ListNode head){
+        ListNode node = head;
         ListNode tmp = head;
         while (tmp!=null){
             System.out.println(tmp.val);
             tmp = tmp.next;
         }
     }
+
+    /**
+     * 尾插
+     * @param head
+     * @param node
+     * @return
+     */
     private static ListNode insertTail(ListNode head, ListNode node){
         ListNode tmp = head;
         while (tmp.next != null )
@@ -68,7 +99,12 @@ public class _01_reverseList {
         printNodes(head);
 
         System.out.println("===========反转链表=========");
-        printNodes(reverseList(head));
+        head = reverseList(head);
+        printNodes(head);
+
+        System.out.println("===========反转链表2=========");
+        head = reverseList2(head);
+        printNodes(head);
 
     }
 
