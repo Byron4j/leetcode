@@ -14,13 +14,13 @@ package org.byron4j.leetcode.primary._03_list;
  * </pre>
  */
 public class _01_reverseList {
-    public static class ListNode{
+    private static class ListNode{
         int val;
         ListNode next;
         ListNode(int x) { val = x; }
     }
 
-    public static ListNode reverseList(ListNode head) {
+    private static ListNode reverseList(ListNode head) {
         // 和删除一样，需要3个节点
         ListNode preNode = null;  // 当前节点的前一个节点
         ListNode nextNode = null;  // 当前节点的下一个节点
@@ -43,7 +43,7 @@ public class _01_reverseList {
      * @param head
      * @return
      */
-    public static ListNode reverseList2(ListNode head) {
+    private static ListNode reverseList2(ListNode head) {
         if( head == null || head.next == null ){
             // 这里：head是最后一个
             return head;
@@ -61,7 +61,7 @@ public class _01_reverseList {
         }
     }
 
-    public static void printNodes(ListNode head){
+    private static void printNodes(ListNode head){
         ListNode node = head;
         ListNode tmp = head;
         while (tmp!=null){
