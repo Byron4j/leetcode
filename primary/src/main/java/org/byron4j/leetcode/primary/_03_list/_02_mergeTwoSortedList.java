@@ -53,20 +53,20 @@ public class _02_mergeTwoSortedList {
             if( l1.val <= l2.val ){
                 // 则l1不断后移
                 // 完成插入链表p的操作
-                ListNode tmp = new ListNode(l1.val);
-                p.next = tmp;
-                p = p.next;
+                //ListNode tmp = new ListNode(l1.val);   // 节省内存
+                p.next = l1;
 
                 // l1 后移
                 l1 = l1.next;
             }else{
                 // l2不断后移
-                ListNode tmp = new ListNode(l2.val);
-                p.next = tmp;
-                p = p.next;
+                //ListNode tmp = new ListNode(l2.val);
+                p.next = l2;
 
                 l2 = l2.next;
             }
+
+            p = p.next;
         }
 
         // 判断剩余的
